@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Similaridade de Textos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Calculadora de Similaridade</h1>
+            <div class="input-group">
+                <label for="text1">Digite o primeiro texto:</label>
+                <textarea id="text1" rows="4" placeholder="Digite o primeiro texto aqui..."></textarea>
+            </div>
+            <div class="input-group">
+                <label for="text2">Digite o segundo texto:</label>
+                <textarea id="text2" rows="4" placeholder="Digite o segundo texto aqui..."></textarea>
+            </div>
+            <button onclick="calcularSimilaridades()">Calcular Similaridade</button>
+            <button onclick="limparCampos()">Limpar Campos</button>
+            <div class="result" id="result" style="display: none;" aria-live="polite">
+                <p id="cosineSimilarity">Similaridade do Cosseno: </p>
+                <p id="jaccardSimilarity">Similaridade de Jaccard: </p>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de erro -->
+    <div id="errorModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fecharModal()">&times;</span>
+            <p>É necessário informar os dois textos para a comparação.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
