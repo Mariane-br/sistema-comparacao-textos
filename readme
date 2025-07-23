@@ -1,1 +1,37 @@
-Para rodar o sistema, basta realizar o download do projeto e abrir o arquivo index.html em um navegador.
+# Sistema de Comparação de Textos
+
+Este projeto foi desenvolvido como parte do Trabalho de Conclusão de Curso (TCC) em Engenharia de Software.
+
+## 🎯 Objetivo
+
+Permitir que qualquer usuário compare a similaridade entre dois textos, utilizando métricas como:
+
+- Similaridade de Jaccard
+- Similaridade do Cosseno
+
+## 🧪 Tecnologias utilizadas
+
+- HTML5
+- CSS3
+- JavaScript (puro)
+
+## ✅ Funcionalidades
+
+- Interface simples e responsiva
+- Cálculo de similaridade em tempo real
+- Feedback visual dos resultados
+
+## 📂 Como usar
+
+1. Baixe ou clone este repositório
+2. Abra o arquivo `index.html` em seu navegador
+3. Insira dois textos e clique em "Calcular Similaridade"
+
+## 🔗 Link do projeto no TCC
+
+Este sistema está documentado no TCC: “Desenvolvimento de Sistema de Comparação de Conteúdo de Textos”.
+
+## 👤 Autoria
+
+Mariane Ribeiro Barbosa  
+Orientador: Prof. Allan Christian Krainski Ferrari
