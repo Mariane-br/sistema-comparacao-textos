@@ -1,9 +1,11 @@
+/* Reset básico e organização de layout */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Corpo da página */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f2f5;
@@ -11,9 +13,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
 }
 
+/* Caixa principal */
 .container {
     width: 100%;
     max-width: 400px;
@@ -26,16 +28,16 @@ body {
     align-items: center;
 }
 
+/* Título */
 h1 {
     color: #1877f2;
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
-    /* <-- centraliza horizontalmente */
     width: 100%;
-    /* garante que ocupe toda a largura do container */
 }
 
+/* Área de texto */
 textarea {
     width: 100%;
     padding: 12px;
@@ -46,6 +48,7 @@ textarea {
     resize: vertical;
 }
 
+/* Rótulos dos campos */
 label {
     font-size: 14px;
     margin-bottom: 5px;
@@ -53,6 +56,7 @@ label {
     color: #4b4f56;
 }
 
+/* Botões */
 button {
     width: 100%;
     padding: 12px;
@@ -69,6 +73,7 @@ button:hover {
     background-color: #165eab;
 }
 
+/* Modal de erro */
 .modal {
     display: none;
     position: fixed;
@@ -80,6 +85,7 @@ button:hover {
     z-index: 1;
 }
 
+/* Conteúdo do modal */
 .modal-content {
     background-color: white;
     padding: 20px;
@@ -91,6 +97,7 @@ button:hover {
     text-align: center;
 }
 
+/* Botão de fechar modal */
 .close-btn {
     color: #aaa;
     font-size: 28px;
@@ -106,6 +113,7 @@ button:hover {
     color: black;
 }
 
+/* Resultados */
 .result {
     text-align: center;
     margin-top: 20px;
@@ -121,6 +129,7 @@ button:hover {
     color: #4b4f56;
 }
 
+/* Grupo de entrada */
 .input-group {
     width: 100%;
     margin-bottom: 15px;
