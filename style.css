@@ -1,103 +1,116 @@
-/* Reset básico e organização de layout */
+/* Reset básico de margin, padding e box-sizing para todo documento */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo da página */
+/* Estilo do corpo da página */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: 'Arial', sans-serif; /* Fonte */
+    background-color: #f0f2f5; /* Cor de fundo clara */
+    display: flex; /* Flexbox para centralizar conteúdo */
+    justify-content: center; /* Centraliza horizontal */
+    align-items: center; /* Centraliza vertical */
+    height: 100vh; /* Altura total da viewport */
 }
 
-/* Caixa principal */
+/* Container principal da calculadora */
 .container {
     width: 100%;
-    max-width: 400px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Largura máxima */
+    background-color: white; /* Fundo branco */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Título */
+/* Estilo do título */
 h1 {
-    color: #1877f2;
+    color: #1877f2; /* Azul */
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
     width: 100%;
 }
 
-/* Área de texto */
+/* Área do textarea */
 textarea {
-    width: 100%;
+    width: 100%; /* ocupa toda largura do container */
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; /* Borda cinza clara */
     border-radius: 5px;
     font-size: 16px;
-    resize: vertical;
+    resize: vertical; /* Permite redimensionar verticalmente */
 }
 
-/* Rótulos dos campos */
+/* Rótulos dos inputs */
 label {
     font-size: 14px;
     margin-bottom: 5px;
-    display: block;
-    color: #4b4f56;
+    display: block; /* Ocupa toda a linha */
+    color: #4b4f56; /* Cinza escuro */
 }
 
-/* Botões */
+/* Estilo dos botões */
 button {
     width: 100%;
     padding: 12px;
     margin-bottom: 10px;
     font-size: 16px;
     border: none;
-    background-color: #1877f2;
+    background-color: #1877f2; /* Azul */
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave no hover */
 }
 
-button:hover {
-    background-color: #165eab;
+/* Efeito ao passar mouse ou focar */
+button:hover,
+button:focus {
+    background-color: #165eab; /* Azul mais escuro */
+    outline: none;
 }
 
-/* Modal de erro */
+/* Modal - camada de fundo escurecida */
 .modal {
-    display: none;
+    display: none; /* Inicialmente escondido */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente preto */
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Quando modal está visível */
+.modal[aria-hidden="false"] {
+    display: flex;
 }
 
 /* Conteúdo do modal */
 .modal-content {
     background-color: white;
     padding: 20px;
-    margin: 15% auto;
-    width: 80%;
+    width: 90%;
     max-width: 400px;
     border-radius: 8px;
     position: relative;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Botão de fechar modal */
+/* Botão para fechar modal */
 .close-btn {
     color: #aaa;
     font-size: 28px;
@@ -105,31 +118,37 @@ button:hover {
     position: absolute;
     top: 10px;
     right: 10px;
+    background: none;
+    border: none;
     cursor: pointer;
 }
 
+/* Efeito hover/focus do botão fechar */
 .close-btn:hover,
 .close-btn:focus {
     color: black;
+    outline: none;
 }
 
-/* Resultados */
+/* Área de resultado */
 .result {
     text-align: center;
     margin-top: 20px;
     font-size: 18px;
 }
 
+/* Parágrafos dentro do resultado */
 .result p {
     margin: 10px 0;
 }
 
+/* Cores do texto do resultado */
 #cosineSimilarity,
 #jaccardSimilarity {
     color: #4b4f56;
 }
 
-/* Grupo de entrada */
+/* Grupo de entrada (label + textarea) */
 .input-group {
     width: 100%;
     margin-bottom: 15px;
